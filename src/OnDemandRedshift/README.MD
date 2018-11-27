@@ -31,14 +31,14 @@ The cloud formation templates takes the below parameters:
 | -------------------     | ---------      | -------------------------------------------------------- |
 | Stack Name          | onDemandStack    | Name for your CloudFromation stack                 	    |
 | Cluster Name		  | my-redshift-cluster     | Name of your Amazon Redshift cluster                  |
-| Delete Schedule          	  | 0 6 * * ? *		   | Corn expression for deleting the cluster      |
+| Delete Schedule          	  | 0 6 * * ? *		   | Corn expression for deleting the cluster [2]     |
 | Creation Hour             | 14		   | Enter the hour in UTC when you want to restore the cluster(0-23)    |
 | Creation Minutes               | 50		   | Enter the minute in UTC when you want to restore the cluster(0-59)   |
 
 
 
 ## Notes:
-1. The code will not work if the number of snapshots exceed the snapshot limit allotted to your account. Please refer the documentation [2][3] for more information on snapshot limits. You can reach [AWS Premium support](https://aws.amazon.com/premiumsupport/) to increase the snapshot limits.
+1. The code will not work if the number of snapshots exceed the snapshot limit allotted to your account. Please refer the documentation [3][4] for more information on snapshot limits. You can reach [AWS Premium support](https://aws.amazon.com/premiumsupport/) to increase the snapshot limits.
 
 2. Do not delete the following resources created by the code, they are required to manage the cluster availability schedule. <br>
 	a. Lambda function <br>
@@ -48,5 +48,7 @@ The cloud formation templates takes the below parameters:
 
 ## References 
 [1] https://aws.amazon.com/pricing/services/ <br>
-[2] https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_redshift <br>
-[3] https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html
+[2] https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html <br>
+[3] https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_redshift <br>
+[4] https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html
+
