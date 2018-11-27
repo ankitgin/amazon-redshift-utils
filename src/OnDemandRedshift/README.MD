@@ -41,10 +41,10 @@ The cloud formation templates takes the below parameters:
 1. The code will not work if the number of snapshots exceed the snapshot limit allotted to your account. Please refer the documentation [2][3] for more information on snapshot limits. You can reach [AWS Premium support](https://aws.amazon.com/premiumsupport/) to increase the snapshot limits.
 
 2. Do not delete the following resources created by the code, they are required to manage the cluster availability schedule. <br>
-	a. Lambda function: Redshift-ondemand-function <br>
-	b. Cloudwatch rules: Ondemand-createCluster-rule   AND  Ondemand-deleteCluster-rule <br>
-	c. Policy: Ondemand_CW_log_policy  <br>
-	d. Role: ondemand-redshift-role-do-not-delete <br>
+	a. Lambda function <br>
+	b. Cloudwatch rules: (create & delete) <br>
+	c. Policy  <br>
+	d. IAM Role <br>
 
 ## References 
 [1] https://aws.amazon.com/pricing/services/ <br>
