@@ -29,12 +29,11 @@ The cloud formation templates takes the below parameters:
 
 | Input Name              | Examples       | Description                                              |
 | -------------------     | ---------      | -------------------------------------------------------- |
-| stackName          | onDemandStack    | Name for your CloudFromation stack                 	    |
-| clusterName		  | my-redshift-cluster     | Name of your Amazon Redshift cluster                  |
-| deleteTime(hour)          	  | 09		   | Enter the hour in UTC when you want to delete the cluster(0-23)      |
-| deleteMin	          | 05             | Enter the minute in UTC when you want to delete the cluster(0-59)    |
-| createTime(hour)              | 14		   | Enter the hour in UTC when you want to restore the cluster(0-23)    |
-| createMin               | 50		   | Enter the minute in UTC when you want to restore the cluster(0-59)   |
+| Stack Name          | onDemandStack    | Name for your CloudFromation stack                 	    |
+| Cluster Name		  | my-redshift-cluster     | Name of your Amazon Redshift cluster                  |
+| Delete Schedule          	  | 0 6 * * ? *		   | Corn expression for deleting the cluster      |
+| Creation Hour             | 14		   | Enter the hour in UTC when you want to restore the cluster(0-23)    |
+| Creation Minutes               | 50		   | Enter the minute in UTC when you want to restore the cluster(0-59)   |
 
 
 
